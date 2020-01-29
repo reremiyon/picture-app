@@ -1,0 +1,37 @@
+.header
+  .header__box
+    .header__box__logo
+      = link_to 'みんなのイラスト',root_path
+    %form.header__upper-list__form
+      %input.header__upper-list__form__text{type: "text", value:"", placeholder: "キーワード"}
+      -# = fa_icon 'search', class: 'header__upper-list__form__icon'
+      .fas.fa-search.header__upper-list__form__icon
+    .header__box__sign-up
+      マイページ
+    .header__box__log-in
+      ログアウト
+    -#   .header__box__right__sign-up
+    -#     =link_to users_path(current_user), class:"header__bottom-list__rigth__sign-up__link" do
+    -#       マイページ
+    -#   .header__box__right__log-in
+    -#     =link_to logout_index_path(current_user), class:"header__bottom-list__rigth__log-in__li" do
+    -#       ログアウト
+    -# - else
+    -#   .header__box__right__sign-up
+    -#     =link_to new_user_registration_path, class:"header__bottom-list__rigth__sign-up__link" do
+    -#       新規登録
+    -#   .header__box__right__log-in
+    -#     =link_to new_user_session_path, class:"header__bottom-list__rigth__log-in__link" do
+    -#       ログイン
+
+.main
+  -# %ul.pictures-display
+  -#   - @pictures.each do |item|
+  -#     %li.pictures-display__box
+  -#       .pictures-display__box__div  
+  -#         .pictures-display__box__div__view
+  -#           = link_to item_path(item), class: "user-mypage-link" do
+  -#             = image_tag "#{item.images.first.url}", alt: 'picture', class: 'items-display__box__div__view__top'
+  -#         .pictures-display__box__div__view__bottom
+  -#           %p.pictures-display__box__div__view__bottom__p
+  -#             = item.item_name
